@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="gu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#7a1b1b">
+  <title>ઓસ્કર એવોર્ડ 2026 – વિદ્યાર્થી ફોર્મ</title>
+  <meta name="description" content="Samast Variya Prajapati Shikshan Samiti – Oscar Award 2026 – Student pending items form">
+  <meta property="og:title" content="ઓસ્કર એવોર્ડ 2026 – વિદ્યાર્થી ફોર્મ / Student Form">
+  <meta property="og:description" content="સમસ્ત વરિયા પ્રજાપતિ શિક્ષણ સમિતિ આયોજિત ઓસ્કર એવોર્ડ 2026 – ગિફ્ટ કિટ, મોમેન્ટો, પ્રમાણપત્ર, મેડલ માટે ફોર્મ">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏆</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@400;600;700&family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="trophy" aria-hidden="true">🏆</div>
+    <p class="org" data-i18n="orgName">સમસ્ત વરિયા પ્રજાપતિ શિક્ષણ સમિતિ આયોજિત</p>
+    <h1 data-i18n="eventName">ઓસ્કર એવોર્ડ 2026</h1>
+    <p class="meta">
+      <span>📅 <span data-i18n="eventDate">4 ઓક્ટોબર 2026</span></span>
+      <span>📍 <span data-i18n="eventPlace">રાજકોટ</span></span>
+    </p>
+  </header>
+
+  <main>
+    <div id="demoBanner" class="banner warn" hidden data-i18n="demoMode"></div>
+    <div id="draftBanner" class="banner info" hidden data-i18n="draftRestored"></div>
+
+    <!-- STEP 0: choose medium (sets the form language) -->
+    <section id="gate" class="card gate">
+      <h2>તમારું માધ્યમ પસંદ કરો<br><small>Choose your medium</small></h2>
+      <button type="button" class="gate-btn" data-medium="Gujarati Medium">
+        <span class="big">ગુજરાતી માધ્યમ</span><span class="hint">ફોર્મ ગુજરાતીમાં</span>
+      </button>
+      <button type="button" class="gate-btn" data-medium="English Medium">
+        <span class="big">English Medium</span><span class="hint">Form in English</span>
+      </button>
+    </section>
+
+    <form id="form" hidden novalidate autocomplete="on">
+      <p class="intro" data-i18n="formPurpose"></p>
+
+      <input type="hidden" name="submissionId">
+      <!-- spam trap: real people never see or fill this -->
+      <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <!-- 1. Student details -->
+      <section class="card">
+        <h2><span class="num">1</span><span data-i18n="secStudent"></span></h2>
+
+        <div class="field">
+          <span class="label" data-i18n="medium"></span>
+          <div class="choices two">
+            <label class="choice"><input type="radio" name="medium" value="Gujarati Medium"><span data-i18n="mediumGu"></span></label>
+            <label class="choice"><input type="radio" name="medium" value="English Medium"><span data-i18n="mediumEn"></span></label>
+          </div>
+          <p class="err"></p>
+        </div>
+
+        <div class="field">
+          <label class="label" for="name" data-i18n="name"></label>
+          <input id="name" name="name" type="text" autocomplete="name" maxlength="100" data-i18n-ph="namePh">
+          <p class="err"></p>
+        </div>
+
+        <div class="field">
+          <label class="label" for="mobile" data-i18n="mobile"></label>
+          <input id="mobile" name="mobile" type="tel" inputmode="numeric" autocomplete="tel-national" maxlength="12" class="phone" data-i18n-ph="mobilePh">
+          <p class="err"></p>
+        </div>
+
+        <div class="field">
+          <label class="label" for="altMobile"><span data-i18n="altMobile"></span> <em data-i18n="optional"></em></label>
+          <input id="altMobile" name="altMobile" type="tel" inputmode="numeric" maxlength="12" class="phone" data-i18n-ph="mobilePh">
+          <p class="err"></p>
+        </div>
+      </section>
+
+      <!-- 2. Address -->
+      <section class="card">
+        <h2><span class="num">2</span><span data-i18n="secAddress"></span></h2>
+
+        <div class="field">
+          <span class="label" data-i18n="city"></span>
+          <div class="choices two">
+            <label class="choice"><input type="radio" name="city" value="Rajkot"><span data-i18n="cityRajkot"></span></label>
+            <label class="choice"><input type="radio" name="city" value="Morbi"><span data-i18n="cityMorbi"></span></label>
+            <label class="choice"><input type="radio" name="city" value="Thangadh"><span data-i18n="cityThangadh"></span></label>
+            <label class="choice"><input type="radio" name="city" value="Other"><span data-i18n="cityOther"></span></label>
+          </div>
+          <p class="err"></p>
+        </div>
+
+        <div class="field" id="cityOtherWrap" hidden>
+          <label class="label" for="cityOther" data-i18n="cityOtherLabel"></label>
+          <input id="cityOther" name="cityOther" type="text" maxlength="60">
+          <p class="err"></p>
+        </div>
+
+        <div class="field">
+          <label class="label" for="address" data-i18n="address"></label>
+          <textarea id="address" name="address" rows="3" maxlength="400" autocomplete="street-address" data-i18n-ph="addressPh"></textarea>
+          <p class="err"></p>
+        </div>
+
+        <div class="field">
+          <label class="label" for="pincode"><span data-i18n="pincode"></span> <em data-i18n="optional"></em></label>
+          <input id="pincode" name="pincode" type="tel" inputmode="numeric" maxlength="6" autocomplete="postal-code" class="digits">
+          <p class="err"></p>
+        </div>
+      </section>
+
+      <!-- 3. Category -->
+      <section class="card">
+        <h2><span class="num">3</span><span data-i18n="secCategory"></span></h2>
+
+        <div class="field">
+          <span class="label" data-i18n="categoryQ"></span>
+          <div class="choices">
+            <label class="choice"><input type="radio" name="category" value="Std 1 to 12"><span data-i18n="catSchool"></span></label>
+            <label class="choice"><input type="radio" name="category" value="College Degree Course"><span data-i18n="catCollege"></span></label>
+            <label class="choice"><input type="radio" name="category" value="Other Achievement"><span data-i18n="catAchievement"></span></label>
+          </div>
+          <p class="err"></p>
+        </div>
+
+        <div id="schoolFields" class="sub" hidden>
+          <div class="field">
+            <label class="label" for="standard" data-i18n="standard"></label>
+            <select id="standard" name="standard"></select>
+            <p class="err"></p>
+          </div>
+          <div class="field">
+            <span class="label" data-i18n="board"></span>
+            <div class="choices">
+              <label class="choice"><input type="radio" name="board" value="GSEB Gujarati Medium"><span data-i18n="boardGsebGu"></span></label>
+              <label class="choice"><input type="radio" name="board" value="GSEB English Medium"><span data-i18n="boardGsebEn"></span></label>
+              <label class="choice"><input type="radio" name="board" value="Other Board (CBSE/ICSE)"><span data-i18n="boardOther"></span></label>
+            </div>
+            <p class="err"></p>
+          </div>
+        </div>
+
+        <div id="collegeFields" class="sub" hidden>
+          <div class="field">
+            <label class="label" for="course" data-i18n="course"></label>
+            <input id="course" name="course" type="text" maxlength="100" data-i18n-ph="coursePh">
+            <p class="err"></p>
+          </div>
+          <div class="field">
+            <label class="label" for="college"><span data-i18n="college"></span> <em data-i18n="optional"></em></label>
+            <input id="college" name="college" type="text" maxlength="150">
+            <p class="err"></p>
+          </div>
+        </div>
+
+        <div id="achievementFields" class="sub" hidden>
+          <div class="field">
+            <label class="label" for="achievement" data-i18n="achievement"></label>
+            <textarea id="achievement" name="achievement" rows="2" maxlength="300" data-i18n-ph="achievementPh"></textarea>
+            <p class="err"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Items received -->
+      <section class="card">
+        <h2><span class="num">4</span><span data-i18n="secItems"></span></h2>
+        <p class="help" data-i18n="itemsHelp"></p>
+
+        <div class="field item">
+          <span class="label"><span class="icon">🎁</span><span data-i18n="giftKit"></span></span>
+          <div class="choices two seg">
+            <label class="choice yes"><input type="radio" name="giftKit" value="Received"><span data-i18n="received"></span></label>
+            <label class="choice no"><input type="radio" name="giftKit" value="Not Received"><span data-i18n="notReceived"></span></label>
+          </div>
+          <p class="err"></p>
+        </div>
+
+        <div class="field item">
+          <span class="label"><span class="icon">🛡️</span><span data-i18n="memento"></span></span>
+          <div class="choices two seg">
+            <label class="choice yes"><input type="radio" name="memento" value="Received"><span data-i18n="received"></span></label>
+            <label class="choice no"><input type="radio" name="memento" value="Not Received"><span data-i18n="notReceived"></span></label>
+          </div>
+          <p class="err"></p>
+        </div>
+
+        <div class="field item">
+          <span class="label"><span class="icon">📜</span><span data-i18n="certificate"></span></span>
+          <div class="choices two seg">
+            <label class="choice yes"><input type="radio" name="certificate" value="Received"><span data-i18n="received"></span></label>
+            <label class="choice no"><input type="radio" name="certificate" value="Not Received"><span data-i18n="notReceived"></span></label>
+          </div>
+          <p class="err"></p>
+        </div>
+
+        <div class="field item">
+          <span class="label"><span class="icon">🏅</span><span data-i18n="medal"></span></span>
+          <div class="choices two seg">
+            <label class="choice yes"><input type="radio" name="medal" value="Received"><span data-i18n="received"></span></label>
+            <label class="choice no"><input type="radio" name="medal" value="Not Received"><span data-i18n="notReceived"></span></label>
+          </div>
+          <p class="err"></p>
+        </div>
+      </section>
+
+      <!-- 5. Delivery (only when something is pending) -->
+      <section class="card" id="deliveryCard" hidden>
+        <h2><span class="num">5</span><span data-i18n="secDelivery"></span></h2>
+        <p class="pending-box"><strong data-i18n="pendingLabel"></strong> <span id="pendingList"></span></p>
+
+        <div class="field">
+          <div class="choices">
+            <label class="choice"><input type="radio" name="delivery" value="Relative in Rajkot"><span data-i18n="delRelative"></span></label>
+            <label class="choice"><input type="radio" name="delivery" value="Home Delivery"><span data-i18n="delHome"></span></label>
+            <label class="choice"><input type="radio" name="delivery" value="Self Collect"><span data-i18n="delSelf"></span></label>
+          </div>
+          <p class="err"></p>
+        </div>
+
+        <div id="relativeFields" class="sub" hidden>
+          <div class="field">
+            <label class="label" for="relativeName" data-i18n="relativeName"></label>
+            <input id="relativeName" name="relativeName" type="text" maxlength="100">
+            <p class="err"></p>
+          </div>
+          <div class="field">
+            <label class="label" for="relativeMobile" data-i18n="relativeMobile"></label>
+            <input id="relativeMobile" name="relativeMobile" type="tel" inputmode="numeric" maxlength="12" class="phone" data-i18n-ph="mobilePh">
+            <p class="err"></p>
+          </div>
+          <div class="field">
+            <label class="label" for="relativeAddress" data-i18n="relativeAddress"></label>
+            <textarea id="relativeAddress" name="relativeAddress" rows="2" maxlength="400"></textarea>
+            <p class="err"></p>
+          </div>
+        </div>
+
+        <p id="homeNote" class="note" hidden data-i18n="delHomeNote"></p>
+        <p id="selfNote" class="note" hidden data-i18n="delSelfNote"></p>
+        <p class="note muted" data-i18n="committeeNote"></p>
+      </section>
+
+      <!-- 6. Final -->
+      <section class="card">
+        <div class="field">
+          <label class="label" for="remarks"><span data-i18n="remarks"></span> <em data-i18n="optional"></em></label>
+          <textarea id="remarks" name="remarks" rows="2" maxlength="500" data-i18n-ph="remarksPh"></textarea>
+        </div>
+
+        <div class="field">
+          <label class="check"><input type="checkbox" name="declare"><span data-i18n="declare"></span></label>
+          <p class="err"></p>
+        </div>
+
+        <button type="submit" id="submitBtn" class="btn primary" data-i18n="submit"></button>
+      </section>
+    </form>
+
+    <!-- Success screen -->
+    <section id="success" class="card success" hidden>
+      <div class="tick" aria-hidden="true">✅</div>
+      <h2 data-i18n="successTitle"></h2>
+      <p class="ref-label" data-i18n="refLabel"></p>
+      <p class="ref" id="refNo"></p>
+      <div id="successBody"></div>
+      <p class="muted" data-i18n="screenshotTip"></p>
+      <button type="button" id="anotherBtn" class="btn secondary" data-i18n="another"></button>
+    </section>
+  </main>
+
+  <footer>
+    <p id="helpline" hidden><span data-i18n="helpline"></span> <a id="helplineLink" href="#"></a></p>
+    <p data-i18n="footer">સમસ્ત વરિયા પ્રજાપતિ શિક્ષણ સમિતિ</p>
+  </footer>
+
+  <div id="toast" class="toast" role="alert" hidden></div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
